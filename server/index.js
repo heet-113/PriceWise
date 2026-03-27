@@ -1,19 +1,15 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 const searchRoutes = require('./routes/search');
 const featuredRoutes = require('./routes/featured');
 const cache = require('./utils/cache');
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
-// CORS — allow frontend dev server
-app.use(
-  cors({
-    origin: ['http://localhost:5173', 'http://localhost:5174', 'http://127.0.0.1:5173'],
-    methods: ['GET'],
-  })
-);
+// CORS — allow all origins so the API can be hit easily, or frontend served directly
+app.use(cors());
 
 app.use(express.json());
 
@@ -49,9 +45,16 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Internal server error' });
 });
 
+// Serve static frontend in production
+app.use(express.static(path.join(__dirname, '../dist')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../dist/index.html'));
+});
+
 app.listen(PORT, () => {
   console.log(`\n🔍 PriceWise Scraping Server`);
-  console.log(`   Running on http://localhost:${PORT}`);
+  console.log(`   Running on port ${PORT}`);
   console.log(`   Health: http://localhost:${PORT}/api/health`);
   console.log(`   Search: http://localhost:${PORT}/api/search?q=nike+shoes\n`);
 });

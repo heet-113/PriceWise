@@ -10,17 +10,6 @@ PriceWise is a classic, editorial-style Indian e-commerce price comparison platf
 - **Real-Time Web Scraping**: Fetches live data to ensure pricing accuracy.
 - **In-Memory Caching**: Minimizes redundant scraping requests and speeds up search times and rate limits.
 
-## Supported Retailers
-
-PriceWise currently supports searching and comparing products on:
-- Amazon India
-- Flipkart
-- Ajio
-- Tata CLiQ
-- Croma
-- Nykaa
-- Snapdeal
-- Shopclues
 
 ## Tech Stack
 
@@ -78,6 +67,18 @@ Open a new terminal window/tab:
 npm run dev
 ```
 The React app will be available at `http://localhost:5173`.
+
+## Deployment on Render
+
+This project is configured to be easily deployed as a single Web Service on [Render](https://render.com/).
+
+1. Create a new **Web Service** on Render and connect your repository.
+2. Configure the service with the following settings:
+   - **Environment**: `Node`
+   - **Build Command**: `npm run build:render`
+   - **Start Command**: `npm start`
+3. Add any necessary environment variables (e.g., `PORT` is automatically provided by Render).
+4. Click **Deploy Web Service**. Render will install dependencies, build the frontend, and start the unified Express server serving both the API and the static React app.
 
 ## API Endpoints
 

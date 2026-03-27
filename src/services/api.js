@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost:3001/api';
+const API_BASE = '/api';
 
 export async function searchProductsLive(query) {
   const response = await fetch(`${API_BASE}/search?q=${encodeURIComponent(query)}`);
