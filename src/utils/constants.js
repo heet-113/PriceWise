@@ -1,3 +1,20 @@
+export const BRAND_URLS = {
+  Amazon: 'https://www.amazon.in',
+  Flipkart: 'https://www.flipkart.com',
+  Myntra: 'https://www.myntra.com',
+  Snapdeal: 'https://www.snapdeal.com',
+  Shopclues: 'https://www.shopclues.com',
+  Nykaa: 'https://www.nykaa.com',
+  Ajio: 'https://www.ajio.com',
+  Meesho: 'https://www.meesho.com',
+  FirstCry: 'https://www.firstcry.com',
+  IndiaMART: 'https://www.indiamart.com',
+  'Tata CliQ': 'https://www.tatacliq.com',
+  JioMart: 'https://www.jiomart.com',
+  Pepperfry: 'https://www.pepperfry.com',
+  Croma: 'https://www.croma.com',
+};
+
 export const PLATFORM_COLORS = {
   Amazon: {
     bg: 'bg-amazon',

@@ -1,6 +1,6 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import useStore from '../store/useStore';
-import { PLATFORM_COLORS, formatPrice, getLowestPricePlatform, getSavingsPercentage } from '../utils/constants';
+import { BRAND_URLS, PLATFORM_COLORS, formatPrice, getLowestPricePlatform, getSavingsPercentage } from '../utils/constants';
 
 const MOCK_REVIEWS = [
   { id: 1, user: 'Rahul S.', rating: 5, date: '2 days ago', text: 'Excellent product! Exactly as described. Very happy with my purchase. The quality is outstanding and delivery was quick.' },
@@ -152,7 +152,7 @@ const ProductPage = () => {
                           style={{ backgroundColor: colors?.hex }}
                         />
                         <div>
-                          <span className="text-sm font-semibold text-text-primary">{platform.name}</span>
+                          <a href={BRAND_URLS[platform.name] || '#'} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-text-primary hover:underline">{platform.name}</a>
                           {isLowest && (
                             <span className="ml-2 px-2 py-0.5 text-[9px] font-bold bg-success text-white rounded-sm uppercase font-serif tracking-widest">
                               Best Deal
@@ -191,7 +191,7 @@ const ProductPage = () => {
                         className="w-2.5 h-2.5 rounded-sm shrink-0 grayscale opacity-50"
                         style={{ backgroundColor: colors?.hex }}
                       />
-                      <span className="text-sm text-text-muted">{platform.name}</span>
+                      <a href={BRAND_URLS[platform.name] || '#'} target="_blank" rel="noopener noreferrer" className="text-sm text-text-muted hover:underline">{platform.name}</a>
                     </div>
                     <div className="flex items-center gap-3">
                       <span className="text-sm text-text-muted line-through">{formatPrice(platform.price)}</span>

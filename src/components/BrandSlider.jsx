@@ -1,4 +1,5 @@
 import React from 'react';
+import { BRAND_URLS } from '../utils/constants';
 
 const BrandSlider = () => {
   const brands = [
@@ -20,15 +21,16 @@ const BrandSlider = () => {
       <div className="flex animate-[scroll_40s_linear_infinite] gap-12 whitespace-nowrap px-12 items-center">
         {[...brands, ...brands, ...brands].map((brand, idx) => (
           <div key={idx} className="flex items-center gap-12 group">
-            <span className="text-xl font-bold font-serif uppercase tracking-widest text-text-muted group-hover:text-accent transition-colors">
+            <a href={BRAND_URLS[brand.name] || '#'} target="_blank" rel="noopener noreferrer" className="text-xl font-bold font-serif uppercase tracking-widest text-text-muted group-hover:text-accent transition-colors hover:underline">
               {brand.name}
-            </span>
+            </a>
             <div className="w-[1px] h-6 bg-border"></div>
           </div>
         ))}
       </div>
-      
-      <style dangerouslySetInnerHTML={{ __html: `
+
+      <style dangerouslySetInnerHTML={{
+        __html: `
         @keyframes scroll {
           0% { transform: translateX(0); }
           100% { transform: translateX(-33.33%); }

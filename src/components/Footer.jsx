@@ -1,6 +1,32 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import useStore from '../store/useStore';
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const { setSelectedCategory, featuredSections } = useStore();
+
+  const handleCategoryClick = (e, category) => {
+    e.preventDefault();
+    setSelectedCategory(category);
+    navigate(`/#category-${category}`);
+  };
+
+  const sectionOrder = ['Electronics', 'Footwear', 'Clothing', 'Beauty', 'Books', 'Home & Kitchen', 'Accessories'];
+  
+  let availableCategories = sectionOrder.filter((cat) => {
+    return featuredSections[cat] && featuredSections[cat].products && featuredSections[cat].products.length > 0;
+  });
+
+  Object.keys(featuredSections).forEach((cat) => {
+    if (!sectionOrder.includes(cat) && featuredSections[cat] && featuredSections[cat].products && featuredSections[cat].products.length > 0) {
+      availableCategories.push(cat);
+    }
+  });
+
+  const categoriesToShow = Object.keys(featuredSections).length > 0 
+    ? availableCategories 
+    : ['Electronics', 'Footwear', 'Clothing', 'Home & Kitchen', 'Beauty', 'Books'];
+
   return (
     <footer className="bg-surface-light border-t border-border mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,8 +53,8 @@ const Footer = () => {
             <ul className="space-y-2.5">
               <li><Link to="/" className="text-sm text-text-muted hover:text-text-primary transition-colors">Home</Link></li>
               <li><Link to="/categories" className="text-sm text-text-muted hover:text-text-primary transition-colors">Categories</Link></li>
-              <li><a href="#" className="text-sm text-text-muted hover:text-text-primary transition-colors">About Us</a></li>
-              <li><a href="#" className="text-sm text-text-muted hover:text-text-primary transition-colors">Contact</a></li>
+              <li><Link to="/about" className="text-sm text-text-muted hover:text-text-primary transition-colors">About Us</Link></li>
+              <li><Link to="/contact" className="text-sm text-text-muted hover:text-text-primary transition-colors">Contact</Link></li>
             </ul>
           </div>
 
@@ -36,12 +62,12 @@ const Footer = () => {
           <div>
             <h3 className="text-sm font-semibold text-text-primary mb-4 uppercase tracking-wider">Platforms</h3>
             <ul className="space-y-2.5">
-              <li><a href="#" className="text-sm text-amazon hover:text-amazon-dark transition-colors">Amazon</a></li>
-              <li><a href="#" className="text-sm text-flipkart hover:text-flipkart-dark transition-colors">Flipkart</a></li>
-              <li><a href="#" className="text-sm text-myntra hover:text-myntra-dark transition-colors">Myntra</a></li>
-              <li><a href="#" className="text-sm text-[#FC2779] hover:opacity-80 transition-opacity">Nykaa</a></li>
-              <li><a href="#" className="text-sm text-[#2C4152] hover:opacity-80 transition-opacity">Ajio</a></li>
-              <li><a href="#" className="text-sm text-[#212121] hover:opacity-80 transition-opacity">Tata CliQ</a></li>
+              <li><a href="https://www.amazon.in" target="_blank" rel="noopener noreferrer" className="text-sm text-amazon hover:text-amazon-dark transition-colors">Amazon</a></li>
+              <li><a href="https://www.flipkart.com" target="_blank" rel="noopener noreferrer" className="text-sm text-flipkart hover:text-flipkart-dark transition-colors">Flipkart</a></li>
+              <li><a href="https://www.myntra.com" target="_blank" rel="noopener noreferrer" className="text-sm text-myntra hover:text-myntra-dark transition-colors">Myntra</a></li>
+              <li><a href="https://www.nykaa.com" target="_blank" rel="noopener noreferrer" className="text-sm text-[#FC2779] hover:opacity-80 transition-opacity">Nykaa</a></li>
+              <li><a href="https://www.ajio.com" target="_blank" rel="noopener noreferrer" className="text-sm text-[#2C4152] hover:opacity-80 transition-opacity">Ajio</a></li>
+              <li><a href="https://www.tatacliq.com" target="_blank" rel="noopener noreferrer" className="text-sm text-[#212121] hover:opacity-80 transition-opacity">Tata CliQ</a></li>
             </ul>
           </div>
 
@@ -49,12 +75,13 @@ const Footer = () => {
           <div>
             <h3 className="text-sm font-semibold text-text-primary mb-4 uppercase tracking-wider">Categories</h3>
             <ul className="space-y-2.5">
-              <li><Link to="/" className="text-sm text-text-muted hover:text-text-primary transition-colors">Electronics</Link></li>
-              <li><Link to="/" className="text-sm text-text-muted hover:text-text-primary transition-colors">Footwear</Link></li>
-              <li><Link to="/" className="text-sm text-text-muted hover:text-text-primary transition-colors">Clothing</Link></li>
-              <li><Link to="/" className="text-sm text-text-muted hover:text-text-primary transition-colors">Home & Kitchen</Link></li>
-              <li><Link to="/" className="text-sm text-text-muted hover:text-text-primary transition-colors">Beauty</Link></li>
-              <li><Link to="/" className="text-sm text-text-muted hover:text-text-primary transition-colors">Books</Link></li>
+              {categoriesToShow.map(cat => (
+                <li key={cat}>
+                  <a href={`/#category-${cat}`} onClick={(e) => handleCategoryClick(e, cat)} className="text-sm text-text-muted hover:text-text-primary transition-colors">
+                    {cat}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -75,8 +102,8 @@ const Footer = () => {
               © 2026 PriceWise. All rights reserved.
             </p>
             <div className="flex items-center gap-4">
-              <a href="#" className="text-xs text-text-muted hover:text-text-primary transition-colors">Privacy Policy</a>
-              <a href="#" className="text-xs text-text-muted hover:text-text-primary transition-colors">Terms of Service</a>
+              <Link to="/privacy-policy" className="text-xs text-text-muted hover:text-text-primary transition-colors">Privacy Policy</Link>
+              <Link to="/terms" className="text-xs text-text-muted hover:text-text-primary transition-colors">Terms of Service</Link>
             </div>
           </div>
         </div>

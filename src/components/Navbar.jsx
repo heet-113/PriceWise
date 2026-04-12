@@ -71,12 +71,6 @@ const Navbar = () => {
             >
               Home
             </Link>
-            <Link
-              to="/categories"
-              className="px-3 py-2 text-sm font-semibold text-accent-secondary hover:underline transition-all uppercase tracking-wider"
-            >
-              Categories
-            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -95,18 +89,6 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Category bar (desktop) */}
-        <div className="hidden md:flex items-center gap-1 pb-2 overflow-x-auto scrollbar-hide">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => handleCategoryClick(cat)}
-              className="px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-text-muted hover:text-accent whitespace-nowrap rounded-sm border border-transparent hover:border-accent transition-all"
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
       </div>
 
       {/* Mobile menu overlay */}
@@ -120,25 +102,6 @@ const Navbar = () => {
             >
               Home
             </Link>
-            <Link
-              to="/categories"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block px-3 py-2.5 text-sm font-bold uppercase tracking-widest text-text-secondary hover:text-accent rounded-sm hover:bg-surface-hover transition-all border-l-2 border-transparent hover:border-accent"
-            >
-              Categories
-            </Link>
-            <div className="border-t border-border pt-2 mt-2">
-              <p className="px-3 py-1 text-xs font-bold text-text-muted uppercase tracking-widest">Browse by Category</p>
-              {categories.map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => handleCategoryClick(cat)}
-                  className="block w-full text-left px-3 py-2 text-sm text-text-secondary font-medium hover:text-accent rounded-sm hover:bg-surface-hover transition-all border-l-2 border-transparent hover:border-accent"
-                >
-                  {cat}
-                </button>
-              ))}
-            </div>
           </div>
         </div>
       )}

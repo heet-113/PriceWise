@@ -5,7 +5,7 @@ import ProductCard from '../components/ProductCard';
 import FilterSidebar from '../components/FilterSidebar';
 import BrandSlider from '../components/BrandSlider';
 import CategoryGrid from '../components/CategoryGrid';
-import { PLATFORM_COLORS } from '../utils/constants';
+import { BRAND_URLS, PLATFORM_COLORS } from '../utils/constants';
 const CATEGORY_COLORS = {
   Electronics: 'from-blue-600/20 to-indigo-600/20 border-blue-500/30',
   Footwear: 'from-orange-600/20 to-amber-600/20 border-orange-500/30',
@@ -125,7 +125,7 @@ const StoreSection = ({ storeName, products }) => {
     <section id={`store-${storeName}`} className="mb-10 pt-4">
       <div className="flex items-center justify-between mb-6 pb-2 border-b border-border">
         <div>
-          <h2 className={`text-xl font-bold font-serif uppercase tracking-widest text-accent-secondary`}>{storeName}</h2>
+          <a href={BRAND_URLS[storeName] || '#'} target="_blank" rel="noopener noreferrer" className={`text-xl font-bold font-serif uppercase tracking-widest text-accent-secondary hover:underline`}>{storeName}</a>
           <div className="w-12 h-[3px] bg-accent mt-2"></div>
           <p className="text-xs text-text-secondary mt-2 tracking-wide font-medium uppercase">{products.length} products found</p>
         </div>
