@@ -1,7 +1,7 @@
 {
-  "name": "pricewise-server",
+  "name": "faithvish-server",
   "version": "1.0.0",
-  "description": "Backend scraping server for PriceWise price comparison",
+  "description": "Backend scraping server for FaithVish price comparison",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",

@@ -7,19 +7,19 @@ const AboutPage = () => {
       
       <div className="prose max-w-none text-text-muted space-y-6">
         <p>
-          Welcome to <strong>PriceWise</strong>, your ultimate destination for finding the best deals across India's top e-commerce platforms. 
+          Welcome to <strong>FaithVish</strong>, your ultimate destination for finding the best deals across India's top e-commerce platforms. 
           We built this platform with a simple mission: to empower consumers to make smarter purchasing decisions by providing transparent, 
           real-time price comparisons.
         </p>
 
         <h2 className="text-2xl font-bold text-text-primary mt-8 mb-4">What We Do</h2>
         <p>
-          Navigating multiple retail websites to find the lowest price can be time-consuming and frustrating. PriceWise aggregates product 
+          Navigating multiple retail websites to find the lowest price can be time-consuming and frustrating. FaithVish aggregates product 
           information from various trusted retailers—such as Amazon, Flipkart, Myntra, Snapdeal, and more—so you can easily see who is offering 
           the best price for the exact product you want, all in one place.
         </p>
 
-        <h2 className="text-2xl font-bold text-text-primary mt-8 mb-4">Why Choose PriceWise?</h2>
+        <h2 className="text-2xl font-bold text-text-primary mt-8 mb-4">Why Choose FaithVish?</h2>
         <ul className="list-disc pl-6 space-y-2">
           <li><strong>Real-Time Comparisons:</strong> We strive to bring you the most accurate and up-to-date pricing data.</li>
           <li><strong>Wide Selection:</strong> Discover deals across categories including electronics, fashion, home appliance, and more.</li>

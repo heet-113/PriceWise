@@ -54,7 +54,7 @@ app.get('*', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`\n🔍 PriceWise Scraping Server`);
+  console.log(`\n🔍 FaithVish Scraping Server`);
   console.log(`   Running on port ${PORT}`);
   console.log(`   Health: http://localhost:${PORT}/api/health`);
   console.log(`   Search: http://localhost:${PORT}/api/search?q=nike+shoes\n`);

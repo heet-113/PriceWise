@@ -35,12 +35,10 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-sm bg-accent flex items-center justify-center">
-                <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
-                </svg>
-              </div>
-              <span className="text-xl font-black text-accent font-serif tracking-tight">PriceWise</span>
+              <img src="/FVicon.svg" alt="FaithVish Logo" className="w-9 h-9 object-contain" />
+              <span className="text-xl font-black font-serif tracking-tight">
+                <span className="text-pink-500">Faith</span><span className="text-cyan-500">Vish</span>
+              </span>
             </div>
             <p className="text-sm text-text-muted leading-relaxed">
               Compare prices across India's top e-commerce platforms. Find the best deals and save money on every purchase.
@@ -90,7 +88,7 @@ const Footer = () => {
         <div className="py-4 border-t border-border">
           <div className="bg-white border-2 border-border rounded-sm p-4 mb-4">
             <p className="text-xs text-text-muted leading-relaxed">
-              <span className="font-semibold text-warning">⚠️ Affiliate Disclaimer:</span> PriceWise is a price comparison platform. 
+              <span className="font-semibold text-warning">⚠️ Affiliate Disclaimer:</span> FaithVish is a price comparison platform. 
               We may earn affiliate commissions when you make purchases through our links. This does not affect the prices you pay. 
               Product prices and availability are subject to change. We strive to keep information accurate but recommend verifying 
               prices on the respective platforms before purchasing. All product names, logos, and brands are property of their 
@@ -99,7 +97,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-2">
             <p className="text-xs text-text-muted">
-              © 2026 PriceWise. All rights reserved.
+              © 2026 FaithVish. All rights reserved.
             </p>
             <div className="flex items-center gap-4">
               <Link to="/privacy-policy" className="text-xs text-text-muted hover:text-text-primary transition-colors">Privacy Policy</Link>

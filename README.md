@@ -1,6 +1,6 @@
-# PriceWise
+# FaithVish
 
-PriceWise is a classic, editorial-style Indian e-commerce price comparison platform. It allows users to search for products and instantly compare prices across major Indian online retailers, helping them find the best deals available. 
+FaithVish is a classic, editorial-style Indian e-commerce price comparison platform. It allows users to search for products and instantly compare prices across major Indian online retailers, helping them find the best deals available. 
 
 ## Features
 

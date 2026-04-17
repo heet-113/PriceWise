@@ -9,7 +9,7 @@ const PrivacyPolicyPage = () => {
         <p><strong>Effective Date:</strong> {new Date().toLocaleDateString()}</p>
         
         <p>
-          Welcome to PriceWise. Your privacy is important to us. This Privacy Policy explains how we collect, 
+          Welcome to FaithVish. Your privacy is important to us. This Privacy Policy explains how we collect, 
           use, disclose, and safeguard your information when you visit our website.
         </p>
 
@@ -37,7 +37,7 @@ const PrivacyPolicyPage = () => {
 
         <h2 className="text-2xl font-bold text-text-primary mt-8 mb-4">3. Third-Party Links & Disclaimer</h2>
         <p>
-          PriceWise contains links to third-party e-commerce retailers (such as Amazon, Flipkart, etc.). 
+          FaithVish contains links to third-party e-commerce retailers (such as Amazon, Flipkart, etc.). 
           We are not responsible for the privacy practices or content of these external sites. Once you leave our site 
           to make a purchase, any information you provide is subject to the third party's privacy policy. Please review 
           their policies before submitting any personal data.
@@ -45,7 +45,7 @@ const PrivacyPolicyPage = () => {
 
         <h2 className="text-2xl font-bold text-text-primary mt-8 mb-4">4. Affiliate Disclosure</h2>
         <p>
-          PriceWise participates in various affiliate marketing programs. We may earn a commission when you click on 
+          FaithVish participates in various affiliate marketing programs. We may earn a commission when you click on 
           links to retailer sites and make a qualifying purchase. This occurs at absolutely no extra cost to you. 
           Tracking mechanisms (like cookies) are used by these affiliate programs to track traffic and sales originating 
           from our site.
@@ -56,8 +56,8 @@ const PrivacyPolicyPage = () => {
           If you have any questions or concerns regarding this Privacy Policy or our data practices, please contact us at:
         </p>
         <p>
-          <a href="mailto:privacy@pricewise.com" className="text-accent underline font-medium hover:text-accent-hover transition-colors">
-            privacy@pricewise.com
+          <a href="mailto:privacy@faithvish.com" className="text-accent underline font-medium hover:text-accent-hover transition-colors">
+            privacy@faithvish.com
           </a>
         </p>
       </div>

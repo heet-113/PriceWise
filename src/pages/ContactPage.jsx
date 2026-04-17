@@ -26,14 +26,14 @@ const ContactPage = () => {
             <h3 className="font-bold text-text-primary">Direct Contact</h3>
             <div>
               <p className="text-sm text-text-muted">General Inquiries & Privacy:</p>
-              <a href="mailto:privacy@pricewise.com" className="text-accent font-medium hover:underline">
-                privacy@pricewise.com
+              <a href="mailto:privacy@faithvish.com" className="text-accent font-medium hover:underline">
+                privacy@faithvish.com
               </a>
             </div>
             <div>
               <p className="text-sm text-text-muted">Partnerships & Affiliates:</p>
-              <a href="mailto:partners@pricewise.com" className="text-accent font-medium hover:underline">
-                partners@pricewise.com
+              <a href="mailto:partners@faithvish.com" className="text-accent font-medium hover:underline">
+                partners@faithvish.com
               </a>
             </div>
           </div>

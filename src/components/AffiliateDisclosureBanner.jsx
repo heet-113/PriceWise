@@ -4,7 +4,7 @@ const AffiliateDisclosureBanner = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-center text-center">
         <p className="text-xs font-medium text-text-muted">
           <span className="font-bold text-accent mr-1">Disclosure:</span> 
-          PriceWise participates in affiliate programs. We may earn a commission when you click links to retailer sites, at no extra cost to you.
+          FaithVish participates in affiliate programs. We may earn a commission when you click links to retailer sites, at no extra cost to you.
         </p>
       </div>
     </div>

@@ -9,13 +9,13 @@ const TermsPage = () => {
         <p><strong>Effective Date:</strong> {new Date().toLocaleDateString()}</p>
         
         <p>
-          Welcome to PriceWise. By accessing or using our website, you agree to comply with and be bound by the 
+          Welcome to FaithVish. By accessing or using our website, you agree to comply with and be bound by the 
           following Terms of Service. If you do not agree, please do not use our site.
         </p>
 
         <h2 className="text-2xl font-bold text-text-primary mt-8 mb-4">1. Nature of the Service</h2>
         <p>
-          PriceWise is exclusively a price comparison tool and aggregator. <strong>We are not a retailer, distributor, or manufacturer.</strong> 
+          FaithVish is exclusively a price comparison tool and aggregator. <strong>We are not a retailer, distributor, or manufacturer.</strong> 
           We do not directly sell any products, manage inventory, or handle payment processing and order fulfillment. 
           Any transactions you make are strictly with the respective third-party retailers.
         </p>
@@ -33,7 +33,7 @@ const TermsPage = () => {
 
         <h2 className="text-2xl font-bold text-text-primary mt-8 mb-4">3. Affiliate Relationship Disclosure</h2>
         <p>
-          PriceWise participates in affiliate marketing programs. <strong>We may earn a commission when you click links to retailer sites and make a purchase.</strong> 
+          FaithVish participates in affiliate marketing programs. <strong>We may earn a commission when you click links to retailer sites and make a purchase.</strong> 
           This comes at no extra cost to you. Our participation in these programs does not impact how we curate or display prices, 
           as our primary goal is to help you find the best deal.
         </p>
@@ -56,8 +56,8 @@ const TermsPage = () => {
           For any questions regarding these Terms, please contact us at:
         </p>
         <p>
-          <a href="mailto:privacy@pricewise.com" className="text-accent underline font-medium hover:text-accent-hover transition-colors">
-            privacy@pricewise.com
+          <a href="mailto:privacy@faithvish.com" className="text-accent underline font-medium hover:text-accent-hover transition-colors">
+            privacy@faithvish.com
           </a>
         </p>
       </div>
