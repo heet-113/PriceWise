@@ -140,18 +140,7 @@ const ProductPage = () => {
               <p className="text-xs text-text-muted mt-1">Inclusive of all taxes</p>
             </div>
 
-            {/* Store Info */}
-            <div className="flex items-center gap-2 mb-5 pb-4 border-b border-border">
-              <div
-                className="w-7 h-7 rounded-sm flex items-center justify-center text-[10px] font-black shrink-0"
-                style={{ backgroundColor: storeColor.hex, color: storeColor.text }}
-              >
-                {product.store?.[0]}
-              </div>
-              <span className="text-sm text-text-secondary">
-                Available on <strong>{product.store}</strong>
-              </span>
-            </div>
+
 
             {/* Buy Now Button */}
             <a
@@ -161,10 +150,10 @@ const ProductPage = () => {
               className="block w-full px-8 py-4 bg-accent text-white text-center text-sm font-bold uppercase tracking-[0.2em] rounded-sm hover:bg-accent-light transition-all border-2 border-accent hover:shadow-[0_8px_30px_rgba(236,72,153,0.3)]"
               id="buy-now-btn"
             >
-              Buy Now on {product.store} →
+              Buy Now →
             </a>
             <p className="text-[10px] text-text-muted text-center mt-2">
-              You will be redirected to {product.store}'s website to complete your purchase.
+              You will be redirected to the retailer's website to complete your purchase.
             </p>
           </div>
 

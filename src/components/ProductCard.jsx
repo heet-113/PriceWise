@@ -88,17 +88,8 @@ const ProductCard = ({ product }) => {
           </div>
         </div>
 
-        {/* Store + CTA */}
-        <div className="pt-3 border-t border-border flex items-center justify-between">
-          <div className="flex items-center gap-1.5">
-            <div
-              className="w-5 h-5 rounded-sm flex items-center justify-center text-[8px] font-black shrink-0"
-              style={{ backgroundColor: storeColor.hex, color: storeColor.text }}
-            >
-              {product.store?.[0]}
-            </div>
-            <span className="text-[11px] text-text-muted">{product.store}</span>
-          </div>
+        {/* CTA */}
+        <div className="pt-3 border-t border-border flex items-center justify-end">
           <span className="text-xs font-bold uppercase tracking-widest text-accent group-hover:text-accent-light transition-colors">
             Shop Now →
           </span>
